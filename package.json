@@ -1,0 +1,33 @@
+{
+  "name": "munchkin-startegy-app",
+  "version": "1.0.0",
+  "description": "An App allowing you to select your deck, see your stats, add your power ups to your character and see your level and your upgrades separate as well as see your stregth level",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VeritasX/Munchkin-Character-Strength-and-Level-Calculator.git"
+  },
+  "keywords": [
+    "Munckin",
+    "Level",
+    "Calculator",
+    "Strength",
+    "calculator"
+  ],
+  "author": "Aaron Endsley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VeritasX/Munchkin-Character-Strength-and-Level-Calculator/issues"
+  },
+  "homepage": "https://github.com/VeritasX/Munchkin-Character-Strength-and-Level-Calculator#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.3.1",
+    "gulp-uglify": "^1.5.3"
+  }
+}
