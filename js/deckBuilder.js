@@ -5,11 +5,14 @@
 //This file contains the functions for crating the decks
 var deck={};
 
-var createCards = function (cardName, points, special){
+var createCards = function (cardName,cardType, points, runAway, special, cardValue){
     return {
         cardName: cardName,
+        cardType:cardType,
         points: points,
-        special: special
+        runAway:runAway,
+        special: special,
+        cardValue:cardValue
     }
 };
 
