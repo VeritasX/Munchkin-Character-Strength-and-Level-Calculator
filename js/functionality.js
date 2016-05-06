@@ -12,6 +12,14 @@ var getMyCard=function(card){
             console.log(deck[cards].points);
             console.log(deck[cards].runAway);
             console.log(deck[cards].cardValue);
+
+            usersCard=deck[cards];
+        }else{
+            console.log('That card does not exist in the deck');
         }
     }
 }
+
+var usersCard;
+
+var userDeck={};
