@@ -19,7 +19,12 @@ var getMyCard=function(card){
         }
     }
 }
+var updateUser=function(){
+    userDeck.push(usersCard);
+    usersCard='';
+}
 
-var usersCard;
+var usersCard='';
 
-var userDeck={};
+var userDeck=[];
+
