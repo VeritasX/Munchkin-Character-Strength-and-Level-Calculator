@@ -18,13 +18,29 @@ var getMyCard=function(card){
             console.log('That card does not exist in the deck');
         }
     }
-}
-var updateUser=function(){
+};
+var addToUser=function(){
     userDeck.push(usersCard);
     usersCard='';
-}
+};
+
+var removeFromUser=function(card){
+    var removeCard=card;
+    
+};
+
+var addUserStrength=function(){
+
+};
+
+var addUserWeapons = function(){
+
+};
+
+
 
 var usersCard='';
 
 var userDeck=[];
+
 
