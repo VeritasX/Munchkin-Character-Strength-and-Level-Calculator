@@ -5,7 +5,7 @@
 
     var legends=function(){
         clearDeck();//this function must be executed so that you can
-        deck.elf=createCards('Elf', 'Race', 0, 1, 'You go up 1 level for every monster you help someone else kill' );
+        deck.elf=createCards('Elf', 'race', 0, 1, 'You go up 1 level for every monster you help someone else kill',0 );
         deck.reallyLongBoy=createCards('Really Long Bow', '2 Hands Big', 3, 0, 'Not Usable by Dwarf', 400);
         deck.goldenFleece=createCards('Golden Fleece', 'Armor', 3, 0, 'Usable by thief only', 500);
         deck.deathMask=createCards('Death Mask', 'Head Gear', 2, 0, 'Not Usable by cleric. The Death Mask  may be discarded to remove one Undead monster from combat. No levels or tresure\'s are gained for that monster', 400 );

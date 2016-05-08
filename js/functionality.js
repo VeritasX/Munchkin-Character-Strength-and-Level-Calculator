@@ -21,6 +21,19 @@ var getMyCard=function(card){
 };
 var addToUser=function(){
     userDeck.push(usersCard);
+    usersCard.points=parseInt(usersCard.points);
+    userStats.points=parseInt(userStats.points);
+    userStats.runAway=parseInt(userStats.runAway);
+    usersCard.runAway=parseInt(usersCard.runAway);
+    usersCard.cardValue=parseInt(usersCard.cardValue);
+    userStats.totalWorth=parseInt(userStats.totalWorth);
+    userStats.points=userStats.points + usersCard.points;
+    userStats.totalWorth=userStats.totalWorth + usersCard.cardValue;
+    userStats.runAway+=usersCard.runAway;
+    
+    if(usersCard.cardType !== 'race') {
+        userStats.gear.push(usersCard.cardName);
+    }
     usersCard='';
 };
 
@@ -29,18 +42,25 @@ var removeFromUser=function(card){
     
 };
 
-var addUserStrength=function(){
 
-};
+var goUpALevel=function(){
+    userStats.level+=1;
+}
 
-var addUserWeapons = function(){
-
-};
-
-
+var goDownALevel=function(){
+    userStats.level-=1;
+}
 
 var usersCard='';
 
 var userDeck=[];
+
+var userStats={
+    level:1,
+    points:0,
+    gear:[],
+    runAway:0,
+    totalWorth:0
+}
 
 
