@@ -45,6 +45,9 @@ var removeFromUser=function(card){
 
 var goUpALevel=function(){
     userStats.level+=1;
+    if(userStats.level === 10){
+        alert('You won the game now no one likes you...jk');
+    }
 }
 
 var goDownALevel=function(){
@@ -56,6 +59,7 @@ var usersCard='';
 var userDeck=[];
 
 var userStats={
+    name:'',
     level:1,
     points:0,
     gear:[],
