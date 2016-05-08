@@ -48,6 +48,8 @@
             if(userDeck[i].cardName == card){
                 console.log(userDeck[i].cardName + ' will be removed')
                 userDeck.splice(i);
+                //remove the rest of the elements by using the elements off the deck, userDeck.splice shoudl be the 
+                //last thing that happens so that the code still has a data source to reference from
 
             }
         }
