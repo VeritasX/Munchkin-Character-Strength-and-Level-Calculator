@@ -29,6 +29,7 @@
 
     var addToUser=function(){
         userDeck.push(usersCard);
+        var nameOfCard=usersCard.cardName;
         usersCard.points=parseInt(usersCard.points);
         userStats.points=parseInt(userStats.points);
         userStats.runAway=parseInt(userStats.runAway);
@@ -40,7 +41,7 @@
         userStats.runAway+=usersCard.runAway;
 
         if(usersCard.cardType !== 'race') {
-            userStats.gear.push(usersCard.cardName);
+            userStats.gear[nameOfCard]=nameOfCard;
         }
         usersCard='';
 
@@ -55,9 +56,8 @@
                 userStats.points-=userDeck[i].points;
                 userStats.runAway -= userDeck[i].runAway;
                 userStats.totalWorth -= userDeck[i].cardValue;
-                if(userStats.gear[card] === userDeck.cardName){
-                    userStats.gear.splice(card);
-                }
+                delete userStats.gear[card];
+
                 //remove the rest of the elements by using the elements off the userDeck, userDeck.splice should be the
                 //last thing that happens so that the code still has a data source to reference from
                 userDeck.splice(i);
@@ -91,7 +91,7 @@
         name:'',
         level:1,
         points:0,
-        gear:[],
+        gear:{},
         runAway:0,
         totalWorth:0
     };
