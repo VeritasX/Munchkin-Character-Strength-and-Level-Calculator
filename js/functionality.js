@@ -4,6 +4,8 @@
     'use strict'
     var getUserName=function(){
         //get the users user name
+        //this currently does not need to have functionality in it
+        //when I create the Ui this function will matter
     };
 
     var getMyCard=function(card){
