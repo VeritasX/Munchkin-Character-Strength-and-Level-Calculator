@@ -2,6 +2,9 @@
      * Created by aaronendsley on 5/6/16.
      */
     'use strict'
+    var getUserName=function(){
+        //get the users user name
+    };
 
     var getMyCard=function(card){
         var myCard=card;
@@ -50,7 +53,7 @@
                 //remove the rest of the elements by using the elements off the userDeck, userDeck.splice should be the
                 //last thing that happens so that the code still has a data source to reference from
                 userDeck.splice(i);
-                
+
 
             }
         }
