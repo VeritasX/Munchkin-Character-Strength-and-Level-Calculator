@@ -37,10 +37,20 @@ var addToUser=function(){
     usersCard='';
 };
 
+
+
+
+
 var removeFromUser=function(card){
     var removeCard=card;
+
+    //Next on the list of functionality to be created
     
 };
+
+
+
+
 
 
 var goUpALevel=function(){
