@@ -52,6 +52,12 @@
         for(var i=0; i < userDeck.length; i++){
             if(userDeck[i].cardName == card){
                 console.log(userDeck[i].cardName + ' will be removed')
+                userStats.points-=userDeck[i].points;
+                userStats.runAway -= userDeck[i].runAway;
+                userStats.totalWorth -= userDeck[i].cardValue;
+                if(userStats.gear[card] === userDeck.cardName){
+                    userStats.gear.splice(card);
+                }
                 //remove the rest of the elements by using the elements off the userDeck, userDeck.splice should be the
                 //last thing that happens so that the code still has a data source to reference from
                 userDeck.splice(i);
