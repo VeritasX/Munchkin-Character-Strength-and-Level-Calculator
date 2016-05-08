@@ -38,20 +38,18 @@ var addToUser=function(){
 };
 
 
-
-
-
 var removeFromUser=function(card){
     var removeCard=card;
+    for(var i=0; i < userDeck.length; i++){
+        if(userDeck[i].cardName == card){
+            console.log(userDeck[i].cardName + ' will be removed')
+            userDeck.splice(i);
 
-    //Next on the list of functionality to be created
+        }
+    }
+    //each call of removeFromUser will have the argument passed in dynamically
     
 };
-
-
-
-
-
 
 var goUpALevel=function(){
     userStats.level+=1;
@@ -64,7 +62,7 @@ var goDownALevel=function(){
     userStats.level-=1;
 }
 
-var usersCard='';
+var usersCard={};
 
 var userDeck=[];
 
@@ -75,6 +73,6 @@ var userStats={
     gear:[],
     runAway:0,
     totalWorth:0
-}
+};
 
 
