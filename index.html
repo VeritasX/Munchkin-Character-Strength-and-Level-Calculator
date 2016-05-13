@@ -6,7 +6,28 @@
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-
+<header>
+    <h1>Munchkin Level and Strength Calculator</h1>
+</header>
+<section class="nameSection">
+    <form>
+        <label>
+            What is your name?
+            <input type="text" name="name" id="name">
+        </label>
+    </form>
+</section>
+<section class="selectCard">
+    <form>
+        <label>
+            What Munchkin deck do you wish to play?
+    <select>
+        <option value="default">Pick a Deck</option>
+        <option value="Munchkin Legends">Munchkin Legends</option>
+    </select>
+        </label>
+    </form>
+</section>
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/deckBuilder.js"></script>
