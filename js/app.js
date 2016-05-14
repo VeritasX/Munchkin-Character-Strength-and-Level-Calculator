@@ -18,7 +18,7 @@ var selectDeck=function(){
         
             if(deck !== {}){
                 for(var card in deck){
-                    $('#cardChooser').append('<option value=' +deck[card].cardName +'>'+deck[card].cardName+'</option>')
+                    $('#cardChooser').append('<option value=' +deck[card].id +'>'+deck[card].cardName+'</option>')
                 };
             };
         
@@ -31,5 +31,6 @@ var selectDeck=function(){
 };
 
 var selectCard=function(){
-    //This will have the logic for the cards in play function.
+    var getValue=$('#cardChooser').val();
+    getMyCard(getValue);
 }

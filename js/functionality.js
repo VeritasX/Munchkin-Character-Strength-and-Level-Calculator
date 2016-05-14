@@ -12,7 +12,7 @@
     var getMyCard=function(card){
         var myCard=card;
         for(var cards in deck){
-            if(myCard == deck[cards].cardName){
+            if(myCard == deck[cards].id){
                 console.log(deck[cards].cardName);
                 console.log(deck[cards].cardType);
                 console.log(deck[cards].points);
