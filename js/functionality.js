@@ -3,9 +3,10 @@
      */
     'use strict'
     var getUserName=function(){
-        //get the users user name
-        //this currently does not need to have functionality in it
-        //when I create the Ui this function will matter
+        var name=$('#name').val();
+        var nameSection =$('.nameSection');
+        userStats.name=name;
+        nameSection.empty();
     };
 
     var getMyCard=function(card){
@@ -19,6 +20,7 @@
                 console.log(deck[cards].cardValue);
     
                 usersCard=deck[cards];
+                
             }else{
                 console.log('That card does not exist in the deck');
             }
