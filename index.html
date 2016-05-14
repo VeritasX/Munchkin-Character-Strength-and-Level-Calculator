@@ -22,11 +22,12 @@
     <form>
         <label>
             What Munchkin deck do you wish to play?
-    <select class="pickDeck" onchange="selectDeck()">
+    <select class="pickDeck" onchange="selectDeck()">2
         <option value="default">Pick a Deck</option>
         <option value="legends">Munchkin Legends</option>
     </select>
         </label>
+        <button type="button"id="hideSelectDeck" onclick="setUpDecks.hideElements('.selectCard')"> Do you wish to select this deck?</button>
     </form>
 </section>
 <section class="level">
@@ -42,10 +43,12 @@
 </section>
 
 <section class="chooseCard">
-    <select>
+    <select id="cardChooser">
         <option value="ChooseYourCard">Choose Your Card</option>
         <!--Loop the cards into the deck after this point-->
+
     </select>
+    <button type="button">Add Card to List</button>
 </section>
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="js/bootstrap.js"></script>
