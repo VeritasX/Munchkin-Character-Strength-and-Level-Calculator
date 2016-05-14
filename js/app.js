@@ -2,13 +2,7 @@
  * Created by aaronendsley on 4/30/16.
  */
 'use strict';
-var setUpDecks={
-    hideElements:function(id){
-        $(id).hide();
-    },
-    legends:legends()
 
-};
 
 
 var selectDeck=function(){
@@ -32,4 +26,5 @@ var selectDeck=function(){
 var selectCard=function(){
     var getValue=$('#cardChooser').val();
     getMyCard(getValue);
+    setUpDecks.userRefresh();
 }
