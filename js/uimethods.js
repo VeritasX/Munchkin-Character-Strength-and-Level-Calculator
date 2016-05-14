@@ -7,18 +7,17 @@ var setUpDecks={
         $(id).hide();
     },
     userRefresh: function(){
-        var userDisplay=$('.userDisplay');
-        if(userDisplay){
-            userDisplay.remove();
-        }else{
+
+        $('.userDisplay').remove();
             $('.stats').append('<div class="userDisplay"></div>');
+
             for(var stat in userStats){
-                if(stat !== userStats.gear){
-                    userDisplay.append('<p>' + userStats[stat] +'</p>');
+                if(userStats[stat] !== userStats.gear) {
+                    $('.userDisplay').append('<p>' + userStats[stat] + '</p>');
                 }
             }
-        }
-    },
+        },
+
     legends:legends()
 
 };

@@ -26,5 +26,4 @@ var selectDeck=function(){
 var selectCard=function(){
     var getValue=$('#cardChooser').val();
     getMyCard(getValue);
-    setUpDecks.userRefresh();
 }
