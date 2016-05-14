@@ -13,7 +13,6 @@ var setUpDecks={
 
 var selectDeck=function(){
     var getValue=$('.pickDeck').val();
-    var thisSection=$('.selectCard');
     var setUpCardSelection=function(){
         
             if(deck !== {}){
