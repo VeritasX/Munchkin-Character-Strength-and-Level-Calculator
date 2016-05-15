@@ -10,20 +10,27 @@
     };
 
     var getMyCard=function(card){
-        var myCard=card;
-        for(var cards in deck){
-            if(myCard == deck[cards].id){
+
+            var myCard = card;
+        
+            for (var cards in deck) {
+                if (myCard == deck[cards].id ) {
 
                     usersCard = deck[cards];
 
-            }
+                };
+
+
         }
 
         //Not Sure if the UI will have to be dynamically changed when this is called, still deciding
     };
 
     var addToUser=function(){
-        if(usersCard) {
+        if($.isEmptyObject(usersCard)) {
+
+        }else{
+
             userDeck.push(usersCard);
             usersCard.points = parseInt(usersCard.points);
             userStats.points = parseInt(userStats.points);
