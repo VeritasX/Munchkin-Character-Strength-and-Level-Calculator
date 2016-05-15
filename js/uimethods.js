@@ -3,8 +3,9 @@
  */
 'use strict'
 var setUpDecks={
-    hideElements:function(id){
-        $(id).hide();
+    hideElements:function(id) {
+        var itemId=$(id);
+        itemId.toggle();
     },
     userRefresh: function(){
         $('.userDisplay').remove();
