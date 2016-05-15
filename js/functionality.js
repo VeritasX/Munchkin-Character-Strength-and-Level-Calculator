@@ -37,14 +37,13 @@
     var removeFromUser=function(card){
         var removeCard=card;
         for(var i=0; i < userDeck.length; i++){
-            if(userDeck[i].cardName == removeCard){
-                console.log(userDeck[i].cardName + ' will be removed')
+            if(userDeck[i].id === removeCard){
                 userStats.points-=userDeck[i].points;
                 userStats.runAway -= userDeck[i].runAway;
                 userStats.totalWorth -= userDeck[i].cardValue;
                 //remove the rest of the elements by using the elements off the userDeck, userDeck.splice should be the
                 //last thing that happens so that the code still has a data source to reference from
-                userDeck.splice(i);
+                userDeck.splice(i,1);
             }
         }
         //each call of removeFromUser will have the argument passed in dynamically

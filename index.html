@@ -39,7 +39,7 @@
 <!-- This will contain the users Stats -->
 
 </section>
-<div class="cardEditors"><button type="button" onclick="setUpDecks.hideElements('.chooseCard')">Add A Card</button><button type="button">Remove A Card</button></div>
+<div class="cardEditors"><button type="button" onclick="setUpDecks.hideElements('.chooseCard')">Add A Card</button><button type="button" onclick="setUpDecks.hideElements('.removeCard')">Remove A Card</button></div>
 <section class="CardsInPlay">
             <h3>Cards in Play</h3>
 
@@ -47,12 +47,22 @@
 </section>
 
 <section class="chooseCard">
+    <h3>Add a Card</h3>
     <select id="cardChooser" onchange="selectCard()">
         <option>Choose Your Card</option>
         <!--Loop the cards into the deck after this point-->
 
     </select>
     <button type="button" onclick="addToUser(); setUpDecks.userRefresh(); setUpDecks.hideElements('.chooseCard')">Add Card to List</button>
+</section>
+<section class="removeCard">
+    <h3>Remove a Card</h3>
+    <select id="selectToRemove">
+
+        <!--Loop the cards into the deck after this point-->
+
+    </select>
+    <button type="button" onclick="removeCard(); setUpDecks.userRefresh(); setUpDecks.hideElements('.removeCard')">Remove Card From List</button>
 </section>
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="js/bootstrap.js"></script>

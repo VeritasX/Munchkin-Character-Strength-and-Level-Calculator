@@ -17,4 +17,9 @@ var selectDeck=function(){
 var selectCard=function(){
     var getValue=$('#cardChooser').val();
     getMyCard(getValue);
+};
+
+var removeCard=function(){
+    var getValue=$('#selectToRemove').val();
+    removeFromUser(getValue);
 }
