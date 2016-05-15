@@ -4,7 +4,6 @@
 'use strict';
 //This file contains the functions for crating the decks
 var deck={};
-
 var createCards = function (id,cardName,cardType, points, runAway, special, cardValue){
     return {
         id:id,
@@ -16,10 +15,8 @@ var createCards = function (id,cardName,cardType, points, runAway, special, card
         cardValue:cardValue
     }
 };
-
 var clearDeck = function(){
     deck={};
 }
-
 //deck.test=createCards('bats', 10, 'no powers'); Template for adding data to the deck
 

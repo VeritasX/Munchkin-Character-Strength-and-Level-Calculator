@@ -7,7 +7,6 @@ var setUpDecks={
         $(id).hide();
     },
     userRefresh: function(){
-
         $('.userDisplay').remove();
         $('.userCards').remove();
             $('.stats').append('<div class="userDisplay"></div>');
@@ -25,7 +24,5 @@ var setUpDecks={
                 $('.userCards').append('<p>' + userDeck[i].cardName +'</p>');
             };
         },
-
     legends:legends()
-
 };
