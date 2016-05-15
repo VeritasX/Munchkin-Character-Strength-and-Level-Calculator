@@ -5,7 +5,7 @@
 var setUpDecks={
     hideElements:function(id) {
         var itemId=$(id);
-        itemId.toggle();
+        itemId.slideToggle();
     },
     userRefresh: function(){
         $('.userDisplay').remove();
