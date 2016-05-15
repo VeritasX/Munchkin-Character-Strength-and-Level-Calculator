@@ -13,9 +13,13 @@ var setUpDecks={
             $('.stats').append('<div class="userDisplay"></div>');
         $('.CardsInPlay').append('<div class="userCards"></div>');
             for(var stat in userStats){
-              
-                    $('.userDisplay').append('<p><strong>'+ titles[stat] + ':</strong>' + userStats[stat] + '</p>');
-
+                    if(userStats[stat] === userStats.name) {
+                        $('.userDisplay').append('<p><strong> User:</strong>' + userStats[stat] + '</p>');
+                    }else if(userStats[stat] !== userStats.name && userStats[stat] !== userStats.totalWorth) {
+                        $('.userDisplay').append('<p><strong>' + titles[stat] + ':</strong>' + userStats[stat] + '</p>');
+                    }else if(userStats[stat] === userStats.totalWorth && userStats.totalWorth !== 0){
+                        $('.userDisplay').append('<p><strong> Total Gold Worth:</strong>' + userStats[stat] + '</p>');
+                    };
             };
             for(var i =0; i < userDeck.length; i++){
                 $('.userCards').append('<p>' + userDeck[i].cardName +'</p>');

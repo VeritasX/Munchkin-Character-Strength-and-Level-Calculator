@@ -89,10 +89,10 @@
         totalWorth:0
     };
    var titles={
-        person: 'User',
+
         level:'Level',
         points:'Strength',
-        runAway:'Run Away',
-        allMyGold:'Worth of hand in Gold'
+        runAway:'Run Away'
+
    };
 
