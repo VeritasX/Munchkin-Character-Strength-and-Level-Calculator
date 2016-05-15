@@ -58,7 +58,9 @@
         }
     }
     var goDownALevel=function(){
-        userStats.level-=1;
+        if(userStats.level > 1) {
+            userStats.level -= 1;
+        }
         //The UI for the level will have to be dynamically changed when this function is called
     }
     var usersCard={};
@@ -71,7 +73,6 @@
         totalWorth:0
     };
    var titles={
-
         level:'Level',
         points:'Strength',
         runAway:'Run Away'
