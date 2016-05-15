@@ -13,16 +13,9 @@
         var myCard=card;
         for(var cards in deck){
             if(myCard == deck[cards].id){
-                console.log(deck[cards].cardName);
-                console.log(deck[cards].cardType);
-                console.log(deck[cards].points);
-                console.log(deck[cards].runAway);
-                console.log(deck[cards].cardValue);
-    
-                usersCard=deck[cards];
-                
-            }else{
-                console.log('That card does not exist in the deck');
+
+                    usersCard = deck[cards];
+
             }
         }
 
@@ -30,22 +23,20 @@
     };
 
     var addToUser=function(){
-        userDeck.push(usersCard);
-        var nameOfCard=usersCard.cardName;
-        usersCard.points=parseInt(usersCard.points);
-        userStats.points=parseInt(userStats.points);
-        userStats.runAway=parseInt(userStats.runAway);
-        usersCard.runAway=parseInt(usersCard.runAway);
-        usersCard.cardValue=parseInt(usersCard.cardValue);
-        userStats.totalWorth=parseInt(userStats.totalWorth);
-        userStats.points=userStats.points + usersCard.points;
-        userStats.totalWorth=userStats.totalWorth + usersCard.cardValue;
-        userStats.runAway+=usersCard.runAway;
-
-        if(usersCard.cardType !== 'race') {
-            userStats.gear[nameOfCard]=nameOfCard;
+        if(usersCard) {
+            userDeck.push(usersCard);
+            usersCard.points = parseInt(usersCard.points);
+            userStats.points = parseInt(userStats.points);
+            userStats.runAway = parseInt(userStats.runAway);
+            usersCard.runAway = parseInt(usersCard.runAway);
+            usersCard.cardValue = parseInt(usersCard.cardValue);
+            userStats.totalWorth = parseInt(userStats.totalWorth);
+            userStats.points = userStats.points + usersCard.points;
+            userStats.totalWorth = userStats.totalWorth + usersCard.cardValue;
+            userStats.runAway += usersCard.runAway;
+            usersCard='';
         }
-        usersCard='';
+
 
         //Each call of this will have to reload all the ui elements being effect by this data
     };
@@ -58,12 +49,12 @@
                 userStats.points-=userDeck[i].points;
                 userStats.runAway -= userDeck[i].runAway;
                 userStats.totalWorth -= userDeck[i].cardValue;
-                delete userStats.gear[removeCard];
+
 
                 //remove the rest of the elements by using the elements off the userDeck, userDeck.splice should be the
                 //last thing that happens so that the code still has a data source to reference from
                 userDeck.splice(i);
-                delete userStats.gear.undefined;
+
 
 
             }
@@ -94,9 +85,14 @@
         name:'',
         level:1,
         points:0,
-        gear:{},
         runAway:0,
         totalWorth:0
     };
-
+   var titles={
+        person: 'User',
+        level:'Level',
+        points:'Strength',
+        runAway:'Run Away',
+        allMyGold:'Worth of hand in Gold'
+   };
 

@@ -13,9 +13,9 @@ var setUpDecks={
             $('.stats').append('<div class="userDisplay"></div>');
         $('.CardsInPlay').append('<div class="userCards"></div>');
             for(var stat in userStats){
-                if(userStats[stat] !== userStats.gear){
-                    $('.userDisplay').append('<p>' + userStats[stat] + '</p>');
-                };
+              
+                    $('.userDisplay').append('<p><strong>'+ titles[stat] + ':</strong>' + userStats[stat] + '</p>');
+
             };
             for(var i =0; i < userDeck.length; i++){
                 $('.userCards').append('<p>' + userDeck[i].cardName +'</p>');
