@@ -33,6 +33,7 @@ label{
     background-color: rgb(0,0,0);
     color:rgb(255,255,255);
     border-radius:1em;
+    font-family: sans, 'Aclonica';
 }
 
 form{
@@ -41,6 +42,11 @@ form{
 }
 label{
     width:100%;
+}
+select{
+    width:100%;
+    background-color: rgb(0,0,0);
+    color: rgb(255,255,255);
 }
 .nameSection{
     margin-top:150px;
@@ -56,6 +62,9 @@ label{
 }
 .stats{
     display: none;
+    color:rgb(255,255,255);
+    font-family: sans, 'Aclonica';
+    text-align: center;
 }
 .CardsInPlay{
     display: none;
