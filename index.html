@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Munchkin Level and Stregth Calculator</title>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
 <header>
-    <h1>Munchkin Level and Strength Calculator</h1>
+    <h1>Munchkin Calculator</h1>
 </header>
 <section class="nameSection">
     <form>
         <label>
-            What is your name?
+            What is your name?<br/>
             <input type="text" name="name" id="name" value>
         </label>
-        <button type="button" class="btn btn-default" onclick="getUserName()">Next</button>
+        <button type="button" class="btn btn-default buttonStyling" onclick="getUserName(); $('.selectCard').slideToggle();">Next</button>
     </form>
 </section>
 <section class="selectCard">
     <form>
         <label>
-            What Munchkin deck do you wish to play?
+            What Munchkin deck do you wish to play?<br/>
     <select class="pickDeck" onchange="selectDeck()">2
         <option value="default">Pick a Deck</option>
         <option value="legends">Munchkin Legends</option>
     </select>
         </label>
-        <button type="button"id="hideSelectDeck" onclick="setUpDecks.hideElements('.selectCard')"> Do you wish to select this deck?</button>
+        <button type="button"id="hideSelectDeck" onclick="setUpDecks.hideElements('.selectCard'); $('.level, .stats').slideToggle();"> Do you wish to select this deck?</button>
     </form>
 </section>
 <section class="level">
