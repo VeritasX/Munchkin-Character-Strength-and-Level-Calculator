@@ -12,7 +12,7 @@ var setUpDecks={
         $('.userCards').remove();
         $('.cardsForRemoval').remove();
             $('.stats').append('<div class="userDisplay"></div>');
-        $('.CardsInPlay').append('<div class="userCards"></div>');
+        $('.cardsInPlayContainer').append('<div class="userCards"></div>');
         $('#selectToRemove').append('<optgroup label="cards in your deck" class="cardsForRemoval"><option>Choose Your Card</option></optgroup>');
             for(var stat in userStats){
                     if(userStats[stat] === userStats.name) {
