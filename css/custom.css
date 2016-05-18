@@ -68,6 +68,9 @@ select{
 }
 .CardsInPlay{
     display: none;
+    color:rgb(255,255,255);
+    font-family: sans, 'Aclonica';
+    text-align: center;
 }
 .cardEditors{
     display: none;
