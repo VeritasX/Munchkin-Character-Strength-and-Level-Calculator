@@ -5,11 +5,16 @@
 var selectDeck=function(){
     var getValue=$('.pickDeck').val();
     var setUpCardSelection=function(){
-            if(deck !== {}){
+            if(deck !== {} && getValue !== 'default'){
                 for(var card in deck){
                     $('#cardChooser').append('<option value=' +deck[card].id +'>'+deck[card].cardName+'</option>')
                 };
-            };
+                $('#hideSelectDeck').click(function(){
+                    setUpDecks.hideElements('.selectCard');
+                    $('.level, .stats, .cardEditors').slideToggle();
+                })
+            }
+
     };
     setUpDecks[getValue];
     setUpCardSelection();
