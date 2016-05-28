@@ -30,5 +30,6 @@ var setUpDecks={
              $('.cardsForRemoval').append('<option value=' +userDeck[i].id +'>'+ userDeck[i].cardName+'</option>');
            };
         },
-    legends:legends()
+    legends:legends(),
+    zombies:zombies()
 };

@@ -12,7 +12,6 @@
         deck.herculesBowArrows=createCards('Hercules-Bow-And-Arrows','Hercules Bow And Arrows','Two Hands',4,0,'This counts as a fire/flame attack', 700);
         deck.laurelWreath=createCards('Laurel-Leaf','Laurel Leaf', 'Head Gear', 1, 0, 'none', 100);
         deck.bermudaShorts=createCards('Bermuda-Shorts-of-Invulnerability','Bermuda Shorts of Invulnerability', 'none', 4,0,'none', 400);
-        deck.hellKnight=createCards('Hellknight','Hellknight', 'faction', 5, 0, 'You are wearing hellknight armor(which counts as both armor and headgear), worth +5 in combat', 0);
         deck.AchillesHeels=createCards('Achilles-Heels','Achilles Heels','footgear', 3, 0, 'Usable byMales Only', 500);
         deck.holeyGrail=createCards('Holey-Grail','Holey Grail', 'One Hand', 3, 0, 'none', 300);
         deck.excalibur=createCards('Excalibur','Excalibur', 'one hand', 4, 0, 'Not usable by wizard', 600);

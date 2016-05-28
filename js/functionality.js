@@ -15,7 +15,7 @@
                     usersCard = deck[cards];
                 };
         }
-        //Not Sure if the UI will have to be dynamically changed when this is called, still deciding
+        //Not Sure if the UI will have to be dynamically changed when this is called, still deciding 
     };
     var addToUser=function(){
         if($.isEmptyObject(usersCard)) {
