@@ -94,3 +94,6 @@ select{
 .removeCard{
     display: none;
 }
+button{
+    margin-top:20px;
+}

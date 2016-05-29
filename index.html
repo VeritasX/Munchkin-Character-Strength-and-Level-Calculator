@@ -35,7 +35,7 @@
     </form>
 </section>
 <section class="level">
-    <button type="button" class="btn btn-default buttonStyling" id="upALevel" onclick="goUpALevel(); setUpDecks.userRefresh();">Go Up A Level</button>
+    <button type="button" class="btn btn-default buttonStyling" id="upALevel" onclick="goUpALevel(); setUpDecks.userRefresh();">Go Up A Level</button><br/>
     <button type="button" class="btn btn-default buttonStyling" id="goDownALevel" onclick="goDownALevel(); setUpDecks.userRefresh();">Go Down A Level</button>
 </section>
 <section class="stats">
@@ -43,7 +43,8 @@
 <!-- This will contain the users Stats -->
 
 </section>
-<div class="cardEditors"><button type="button" class="btn btn-default buttonStyling" onclick="setUpDecks.hideElements('.chooseCard'); $('.level, .stats, .cardEditors').slideToggle();">Add A Card</button><button type="button" class="btn btn-default buttonStyling" onclick="setUpDecks.hideElements('.removeCard'); $('.level, .stats, .cardEditors').slideToggle();">Remove A Card</button>
+<div class="cardEditors"><button type="button" class="btn btn-default buttonStyling" onclick="setUpDecks.hideElements('.chooseCard'); $('.level, .stats, .cardEditors').slideToggle();">Add A Card</button>
+    <button type="button" class="btn btn-default buttonStyling" onclick="setUpDecks.hideElements('.removeCard'); $('.level, .stats, .cardEditors').slideToggle();">Remove A Card</button>
     <button type="button" class="btn btn-default buttonStyling" onclick="setUpDecks.hideElements('.CardsInPlay'); $('.level, .stats, .cardEditors').slideToggle();">Show Cards In Play</button></div>
 <section class="CardsInPlay">
     <div class="cardsInPlayContainer">
