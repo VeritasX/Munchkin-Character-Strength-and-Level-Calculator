@@ -21,7 +21,6 @@ var selectDeck=function(){
                 break;
         }
     };
-    changeTheView();
     findDeck(getValue);
 
 
@@ -35,14 +34,4 @@ var selectCard=function(){
 var removeCard=function(){
     var getValue=$('#selectToRemove').val();
     removeFromUser(getValue);
-};
-
-var changeTheView=function(){
-    var getValue=$('.pickDeck').val();
-    if(deck !== {} && getValue !== 'default') {
-        $('#hideSelectDeck').click(function () {
-            setUpDecks.hideElements('.selectCard');
-            $('.level, .stats, .cardEditors').slideToggle();
-        });
-    };
 };
