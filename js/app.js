@@ -5,18 +5,26 @@
 var selectDeck=function(){
     var getValue=$('.pickDeck').val();
     var setUpCardSelection=function(){
-            if(deck !== {} && getValue !== 'default'){
-                for(var card in deck){
-                    $('#cardChooser').append('<option value=' +deck[card].id +'>'+deck[card].cardName+'</option>')
-                };
-                $('#hideSelectDeck').click(function(){
-                    setUpDecks.hideElements('.selectCard');
-                    $('.level, .stats, .cardEditors').slideToggle();
-                })
-            }
+
+                for(var card in deck) {
+                    $('#cardChooser').append('<option value=' + deck[card].id + '>' + deck[card].cardName + '</option>')
+                }
 
     };
-    setUpDecks[getValue];
+    var findDeck = function (val){
+        switch(val){
+            case 'legends':
+                legends();
+                break;
+                case 'zombies':
+                zombies();
+                break;
+        }
+    };
+    changeTheView();
+    findDeck(getValue);
+
+
     setUpCardSelection();
 };
 var selectCard=function(){
@@ -27,4 +35,14 @@ var selectCard=function(){
 var removeCard=function(){
     var getValue=$('#selectToRemove').val();
     removeFromUser(getValue);
-}
+};
+
+var changeTheView=function(){
+    var getValue=$('.pickDeck').val();
+    if(deck !== {} && getValue !== 'default') {
+        $('#hideSelectDeck').click(function () {
+            setUpDecks.hideElements('.selectCard');
+            $('.level, .stats, .cardEditors').slideToggle();
+        });
+    };
+};

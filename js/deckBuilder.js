@@ -17,6 +17,6 @@ var createCards = function (id,cardName,cardType, points, runAway, special, card
 };
 var clearDeck = function(){
     deck={};
-}
+};
 //deck.test=createCards('bats', 10, 'no powers'); Template for adding data to the deck
 

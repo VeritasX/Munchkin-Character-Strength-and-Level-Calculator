@@ -1,7 +1,7 @@
 /**
  * Created by aaronendsley on 5/14/16.
  */
-'use strict'
+'use strict';
 var setUpDecks={
     hideElements:function(id) {
         var itemId=$(id);
@@ -28,8 +28,6 @@ var setUpDecks={
             };
            for(var i =0; i < userDeck.length; i++){
              $('.cardsForRemoval').append('<option value=' +userDeck[i].id +'>'+ userDeck[i].cardName+'</option>');
-           };
-        },
-    legends:legends(),
-    zombies:zombies()
+           }
+        }
 };
