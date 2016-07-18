@@ -20,3 +20,20 @@ var clearDeck = function(){
 };
 //deck.test=createCards('bats', 10, 'no powers'); Template for adding data to the deck
 
+
+//deck specific operations
+
+var removeStatTitleAndHooks = function(attribute,hook,sectionId){
+    var objectToLookFor = attribute;
+    var domHook = hook;
+    var domElement = domHook + sectionId;
+    if( objectToLookFor in userStats){
+        delete userStats[objectToLookFor];
+        delete userStats[undefined];
+    };
+
+    $(domElement).remove();
+
+
+
+};

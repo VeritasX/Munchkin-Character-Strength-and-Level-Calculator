@@ -12,21 +12,7 @@ var selectDeck=function(){
 
     };
 
-    var removeStatTitle = function(attribute,hook,sectionId){
-        // This function will remove a key from the the userStats Object
-        var objectToLookFor = attribute;
-        var domHook = hook
-        var domElement = domHook + sectionId;
-        if( objectToLookFor in userStats){
-            delete userStats[objectToLookFor];
-            delete userStats[undefined];
-        };
 
-        $(domElement).remove();
-
-
-
-    };
     var findDeck = function (val){
         switch(val){
             case 'legends':
@@ -37,7 +23,7 @@ var selectDeck=function(){
                 break;
 
             case 'MDeluxe':
-                removeStatTitle('level','.','level');
+                mdeluxe();
                 break;
         }
     };
@@ -67,5 +53,5 @@ var changeButton=function(){
     }
 
 
-}
+};
 
