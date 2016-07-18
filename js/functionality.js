@@ -77,3 +77,9 @@
         runAway:'Run Away'
    };
 
+   var reloadUI=function(){
+       //if there is a better way of doing this then this is temporary
+       window.location.reload();
+   }
+
+
