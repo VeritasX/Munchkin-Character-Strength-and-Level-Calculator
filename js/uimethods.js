@@ -10,7 +10,7 @@ var setUpDecks={
     userRefresh: function(){
         $('.userDisplay').remove();
         $('.userCards').remove();
-        $('.cardsForRemoval').remove();
+        $('.removeCardsFromDeck').empty();
             $('.stats').append('<div class="userDisplay"></div>');
         $('.cardsInPlayContainer').append('<div class="userCards"></div>');
         $('.removeCardsFromDeck').append('<optgroup label="cards in your deck" class="cardsForRemoval"><option>Choose Your Card</option></optgroup>');
@@ -27,7 +27,7 @@ var setUpDecks={
                 $('.userCards').append('<p>' + userDeck[i].cardName +'</p>');
             };
            for(var i =0; i < userDeck.length; i++){
-             $('.cardsForRemoval').append('<option value=' +userDeck[i].id +'>'+ userDeck[i].cardName+'</option>');
+             $('.removeCardsFromDeck').append('<option value=' +userDeck[i].id +'>'+ userDeck[i].cardName+'</option>');
            }
         }
 };
