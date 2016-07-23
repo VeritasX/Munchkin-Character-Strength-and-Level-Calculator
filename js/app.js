@@ -42,16 +42,5 @@ var removeCard=function(){
     removeFromUser(getValue);
 };
 
-var changeButton=function(){
-    var selectValue=$('#pickDeck').val();
 
-    if(selectValue !== 'default'){
-        $('#hideSelectDeck').removeAttr('disabled');
-
-    }else{
-        $('#hideSelectDeck').attr('disabled');
-    }
-
-
-};
 

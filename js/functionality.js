@@ -76,8 +76,12 @@
    };
 
    var reloadUI=function(){
-       //if there is a better way of doing this then this is temporary
+
        window.location.reload();
+
+       //create a function to  see if the user object has level on it if it doesnt then add it on if it does do nothing
+       //Take the user back to the card selection screen
+       // reset the userStats object and clear the usersDeck array.
    }
 
 
