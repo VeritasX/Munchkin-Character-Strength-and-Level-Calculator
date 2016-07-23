@@ -33,7 +33,7 @@
     </select>
         </label>
         <button type="button" class="btn btn-default buttonStyling" id="hideSelectDeck" onclick="selectDeck(); setUpDecks.hideElements('.selectCard');
-            $('.level, .stats, .cardEditors').slideToggle();"> Do you wish to select this deck?</button>
+            $('.level, .stats, .cardEditors, .reset ').slideToggle();"> Do you wish to select this deck?</button>
     </form>
 </section>
 <section class="level">
@@ -48,7 +48,7 @@
 <div class="cardEditors"><button type="button" class="btn btn-default buttonStyling" onclick="setUpDecks.hideElements('.chooseCard'); $('.level, .stats, .cardEditors').slideToggle();">Add A Card</button>
     <button type="button" class="btn btn-default buttonStyling" onclick="setUpDecks.hideElements('.removeCard'); $('.level, .stats, .cardEditors').slideToggle();">Remove A Card</button>
     <button type="button" class="btn btn-default buttonStyling" onclick="setUpDecks.hideElements('.CardsInPlay'); $('.level, .stats, .cardEditors').slideToggle();">Show Cards In Play</button></div>
-<button type="button" class="btn btn-default buttonStyling" onclick="reloadUI()">Reset</button>
+<button type="button" class="btn btn-default buttonStyling reset" onclick="reloadUI()">Reset</button>
 <section class="CardsInPlay">
     <div class="cardsInPlayContainer">
             <h3>Cards in Play</h3>

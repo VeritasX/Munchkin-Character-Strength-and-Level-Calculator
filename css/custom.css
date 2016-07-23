@@ -94,6 +94,9 @@ select{
 .removeCard{
     display: none;
 }
+.reset{
+    display:none;
+}
 button{
     margin-top:20px;
 }

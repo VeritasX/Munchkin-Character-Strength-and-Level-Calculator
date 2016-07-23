@@ -1,5 +1,4 @@
-    /**
-     * Created by aaronendsley on 5/6/16.
+                                                                                                   /**     * Created by aaronendsley on 5/6/16.
      */
     'use strict'
     var getUserName=function(){
@@ -46,14 +45,13 @@
                 userDeck.splice(i,1);
             }
         }
-        //each call of removeFromUser will have the argument passed in dynamically
-        //each call will also have to reload the list of userDeck and other related items when the ui is added
+
     };
     var goUpALevel=function(){
         userStats.level+=1;
         if(userStats.level === 10){
             alert('You won the game now no one likes you...jk');
-            //The Ui will have to be dynamically changed when this occurs
+            
         }
     }
     var goDownALevel=function(){
