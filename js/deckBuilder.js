@@ -32,7 +32,7 @@ var removeStatTitleAndHooks = function(attribute,hook,sectionId){
         delete userStats[undefined];
     };
 
-    $(domElement).remove();
+    $(domElement).slideToggle();
 
 
 

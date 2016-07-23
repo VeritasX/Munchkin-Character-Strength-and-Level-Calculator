@@ -1,4 +1,4 @@
-                                                                                                   /**     * Created by aaronendsley on 5/6/16.
+/**     * Created by aaronendsley on 5/6/16.
      */
     'use strict'
     var getUserName=function(){
@@ -14,7 +14,7 @@
                     usersCard = deck[cards];
                 };
         }
-        //Not Sure if the UI will have to be dynamically changed when this is called, still deciding 
+        //Not Sure if the UI will have to be dynamically changed when this is called, still deciding
     };
     var addToUser=function(){
         if($.isEmptyObject(usersCard)) {
@@ -76,12 +76,31 @@
    };
 
    var reloadUI=function(){
+       var storeUserName=userStats.name;
+       var checkDeckForStat= function(){
+           var checkVal=$('.pickDeck').val();
+           if(!('level' in userStats)){
+             userStats.level=1;
+           }
 
-       window.location.reload();
-
-       //create a function to  see if the user object has level on it if it doesnt then add it on if it does do nothing
-       //Take the user back to the card selection screen
-       // reset the userStats object and clear the usersDeck array.
-   }
+           if(checkVal =='MDeluxe') {
+               $('.level').slideToggle();
+           }
+       };
+       checkDeckForStat();
+       $('.level, .stats, .cardEditors, .reset , .selectCard ').slideToggle();
+       userStats={
+           name: storeUserName,
+           level:1,
+           points:0,
+           runAway:0,
+           totalWorth:0
+       };
+       userDeck=[];
+       setUpDecks.userRefresh();
+       deck={};
+       $('.addCards').empty();
+       $('.removeCardsFromDeck').empty();
+   };
 
 

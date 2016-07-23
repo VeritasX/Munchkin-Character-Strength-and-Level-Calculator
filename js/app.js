@@ -7,7 +7,7 @@ var selectDeck=function(){
     var setUpCardSelection=function(){
 
                 for(var card in deck) {
-                    $('#cardChooser').append('<option value=' + deck[card].id + '>' + deck[card].cardName + '</option>')
+                    $('.addCards').append('<option value=' + deck[card].id + '>' + deck[card].cardName + '</option>')
                 }
 
     };

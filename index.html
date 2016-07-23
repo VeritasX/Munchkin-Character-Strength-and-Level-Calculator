@@ -61,17 +61,19 @@
     <h3>Add a Card</h3>
     <select id="cardChooser" onchange="selectCard()">
         <option>Choose Your Card</option>
+        <optgroup label="Add a Card" class="addCards">
         <!--Loop the cards into the deck after this point-->
-
+        </optgroup>
     </select>
     <button type="button" class="btn btn-default buttonStyling" onclick="addToUser(); setUpDecks.userRefresh(); setUpDecks.hideElements('.chooseCard'); $('.level, .stats, .cardEditors').slideToggle();">Add Card to List</button>
 </section>
 <section class="removeCard">
     <h3>Remove a Card</h3>
     <select id="selectToRemove">
+        <optgroup label="cards In deck" class="removeCardsFromDeck">
 
         <!--Loop the cards into the deck after this point-->
-
+        </optgroup>
     </select>
     <button type="button" class="btn btn-default buttonStyling" onclick="removeCard(); setUpDecks.userRefresh(); setUpDecks.hideElements('.removeCard'); $('.level, .stats, .cardEditors').slideToggle();">Remove Card From List</button>
 
