@@ -26,7 +26,7 @@
         <label>
             What Munchkin deck do you wish to play?<br/>
     <select class="pickDeck">
-        <option value="default">Pick a Deck</option>
+        <option value="default" selected = "selected">Pick a Deck</option>
         <option value="legends">Munchkin Legends</option>
         <option value="zombies">Munchkin Zombies</option>
         <option value="MDeluxe">Munchkin Deluxe</option>
@@ -45,37 +45,38 @@
 <!-- This will contain the users Stats -->
 
 </section>
-<div class="cardEditors"><button type="button" class="btn btn-default buttonStyling" onclick="setUpDecks.hideElements('.chooseCard'); $('.level, .stats, .cardEditors').slideToggle();">Add A Card</button>
-    <button type="button" class="btn btn-default buttonStyling" onclick="setUpDecks.hideElements('.removeCard'); $('.level, .stats, .cardEditors').slideToggle();">Remove A Card</button>
-    <button type="button" class="btn btn-default buttonStyling" onclick="setUpDecks.hideElements('.CardsInPlay'); $('.level, .stats, .cardEditors').slideToggle();">Show Cards In Play</button></div>
+<div class="cardEditors"><button type="button" class="btn btn-default buttonStyling" onclick="setUpDecks.hideElements('.chooseCard'); $('.level, .stats, .cardEditors , .reset').slideToggle();">Add A Card</button>
+    <button type="button" class="btn btn-default buttonStyling" onclick="setUpDecks.hideElements('.removeCard'); $('.level, .stats, .cardEditors , .reset').slideToggle();">Remove A Card</button>
+    <button type="button" class="btn btn-default buttonStyling" onclick="setUpDecks.hideElements('.CardsInPlay'); $('.level, .stats, .cardEditors, .reset').slideToggle();">Show Cards In Play</button></div>
 <button type="button" class="btn btn-default buttonStyling reset" onclick="reloadUI()">Reset</button>
 <section class="CardsInPlay">
     <div class="cardsInPlayContainer">
             <h3>Cards in Play</h3>
     </div>
     <!--This will Contain all the cards in play-->
-    <button type="button" class="btn btn-default buttonStyling" onclick="setUpDecks.hideElements('.CardsInPlay'); $('.level, .stats, .cardEditors').slideToggle();">Back to Stats</button>
+    <button type="button" class="btn btn-default buttonStyling" onclick="setUpDecks.hideElements('.CardsInPlay'); $('.level, .stats, .cardEditors, .reset').slideToggle();">Back to Stats</button>
 </section>
 
 <section class="chooseCard">
     <h3>Add a Card</h3>
     <select id="cardChooser" onchange="selectCard()">
-        <option>Choose Your Card</option>
-        <optgroup label="Add a Card" class="addCards">
+        <optgroup value="default" label="Add a Card" class="addCards" selected = "selected">
         <!--Loop the cards into the deck after this point-->
         </optgroup>
     </select>
-    <button type="button" class="btn btn-default buttonStyling" onclick="addToUser(); setUpDecks.userRefresh(); setUpDecks.hideElements('.chooseCard'); $('.level, .stats, .cardEditors').slideToggle();">Add Card to List</button>
+    <button type="button" class="btn btn-default buttonStyling" onclick="addToUser(); setUpDecks.userRefresh(); setUpDecks.hideElements('.chooseCard'); $('.level, .stats, .cardEditors, .reset').slideToggle();">Add Card to List</button>
+    <button type="button" class="btn btn-default buttonStyling" onclick="setUpDecks.hideElements('.chooseCard');$('.level, .stats, .cardEditors, .reset').slideToggle();">Back to Stats</button>
 </section>
 <section class="removeCard">
     <h3>Remove a Card</h3>
     <select id="selectToRemove">
-        <optgroup label="cards In deck" class="removeCardsFromDeck">
+        <optgroup label="cards In deck" class="removeCardsFromDeck" selected="selected">
 
         <!--Loop the cards into the deck after this point-->
         </optgroup>
     </select>
-    <button type="button" class="btn btn-default buttonStyling" onclick="removeCard(); setUpDecks.userRefresh(); setUpDecks.hideElements('.removeCard'); $('.level, .stats, .cardEditors').slideToggle();">Remove Card From List</button>
+    <button type="button" class="btn btn-default buttonStyling" onclick="removeCard(); setUpDecks.userRefresh(); setUpDecks.hideElements('.removeCard'); $('.level, .stats, .cardEditors, .reset').slideToggle();">Remove Card From List</button>
+    <button type="button" class="btn btn-default buttonStyling" onclick="setUpDecks.hideElements('.removeCard'); $('.level, .stats, .cardEditors, .reset').slideToggle();" >Back to Stats</button>
 
 </section>
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
