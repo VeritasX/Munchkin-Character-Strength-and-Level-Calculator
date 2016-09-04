@@ -7,5 +7,4 @@ Allows the user to input their card, and get back data about that card and add t
 As well as keep track of their level.
 
 #Disclaimers
-This Project has a UI however currently the experience is only for mobile, I plan to add a desktop UI Shortly.
-
+This Project has a UI however currently the experience is only for mobile, I plan to add a desktop soon.
