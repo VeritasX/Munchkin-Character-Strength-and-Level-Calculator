@@ -3,6 +3,7 @@
  */
 'use strict'
 var zombies=function(){
+    addLevelsTab();
     clearDeck();
     deck.bb=createCards('bb', 'Bowling Ball', '1 Hand', 2, 0, 'none', 200);
     deck.fast=createCards('fa', 'fast', 'Power Rank 2', 0, 1, 'none', 0);

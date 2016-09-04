@@ -4,6 +4,7 @@
 'use strict'
 
     var legends=function(){
+        addLevelsTab();
         clearDeck();//this function must be executed so that you can
         deck.elf=createCards('Elf','Elf', 'race', 0, 1, 'You go up 1 level for every monster you help someone else kill',0 );
         deck.reallyLongBow=createCards('Really-Long-Bow','Really Long Bow', '2 Hands Big', 3, 0, 'Not Usable by Dwarf', 400);

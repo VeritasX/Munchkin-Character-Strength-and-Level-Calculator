@@ -3,6 +3,7 @@
  */
 
 var mdeluxe=function(){
+    extractLevelsTab();
     clearDeck();
     removeStatTitleAndHooks('level','.','level');
 

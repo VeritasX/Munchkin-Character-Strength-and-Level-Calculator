@@ -51,7 +51,7 @@
         userStats.level+=1;
         if(userStats.level === 10){
             alert('You won the game now no one likes you...jk');
-            
+
         }
     }
     var goDownALevel=function(){
@@ -60,6 +60,29 @@
         }
         //The UI for the level will have to be dynamically changed when this function is called
     }
+
+    var extractLevelsTab=function (){
+      if(levelChecker.hasLevel === true){
+          $('.level').empty();
+          levelChecker.hasLevel=false;
+      }
+    };
+
+    var addLevelsTab =function(){
+    if(levelChecker.hasLevel === false){
+    $('.level').append('<button type="button" class="btn btn-default buttonStyling" id="upALevel" onclick="goUpALevel(); setUpDecks.userRefresh();">Go Up A Level</button><br/>');
+    $('.level').append('<button type="button" class="btn btn-default buttonStyling" id="goDownALevel" onclick="goDownALevel(); setUpDecks.userRefresh();">Go Down A Level</button>');
+    levelChecker.hasLevel=true;
+    }
+
+  };
+
+
+
+    var levelChecker={
+      hasLevel:true
+    }
+
     var usersCard={};
     var userDeck=[];
     var userStats={
@@ -85,7 +108,7 @@
 
            if(checkVal =='MDeluxe') {
                $('.level').slideToggle();
-           }
+           };
        };
        checkDeckForStat();
        $('.level, .stats, .cardEditors, .reset , .selectCard ').slideToggle();
@@ -102,5 +125,3 @@
        $('.addCards').empty();
        $('.removeCardsFromDeck').empty();
    };
-
-
