@@ -6,7 +6,7 @@ h1{
     font-weight:bold;
     color: rgb(255,255,255);
     font-family:sans, 'Aclonica';
-   
+
 }
 h3{
     font-weight:bold;
@@ -23,6 +23,10 @@ header{
     left:0;
     width:100%;
     text-align: center;
+}
+
+.container{
+  width:100%;
 }
 input{
     background-color: rgb(0,0,0);
@@ -99,4 +103,13 @@ select{
 }
 button{
     margin-top:20px;
+}
+
+@media (min-width:900px){
+  .container{
+    width: 600px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
 }

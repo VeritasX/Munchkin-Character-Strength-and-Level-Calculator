@@ -77,8 +77,6 @@
 
   };
 
-
-
     var levelChecker={
       hasLevel:true
     }
