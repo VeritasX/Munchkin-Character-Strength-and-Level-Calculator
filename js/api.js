@@ -14,7 +14,7 @@
                     usersCard = deck[cards];
                 };
         }
-        //Not Sure if the UI will have to be dynamically changed when this is called, still deciding
+
     };
     var addToUser=function(){
         if($.isEmptyObject(usersCard)) {
@@ -31,7 +31,7 @@
             userStats.runAway += usersCard.runAway;
             usersCard='';
         }
-        //Each call of this will have to reload all the ui elements being effect by this data
+
     };
     var removeFromUser=function(card){
         var removeCard=card;
@@ -58,7 +58,7 @@
         if(userStats.level > 1) {
             userStats.level -= 1;
         }
-        //The UI for the level will have to be dynamically changed when this function is called
+
     }
 
     var extractLevelsTab=function (){
